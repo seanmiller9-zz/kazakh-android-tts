@@ -19,10 +19,13 @@ To get the project working on your local machine for development:
 
 ## Contributing
 
-Pull requests are welcome! Any feedback from poor audio for certain words is also welcome via opening an issue.
+Pull requests are welcome! Any feedback from poor audio for certain words is also welcome via 
+opening an issue.
+
+In addition, feel free to use this project as a basis for another Turkic language TTS
+service for Android (or any language that's not Turkic for that matter, too!).
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments

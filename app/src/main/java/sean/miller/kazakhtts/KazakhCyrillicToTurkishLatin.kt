@@ -24,8 +24,6 @@
 
 package sean.miller.kazakhtts
 
-import java.nio.charset.CharacterCodingException
-
 class KazakhCyrillicParser {
     private val writingSystemConversionMap: Map<String, String> = hashMapOf(
             "a" to "a",
@@ -70,6 +68,7 @@ class KazakhCyrillicParser {
             "э" to "é",
             "ю" to "yu",
             "я" to "ya"
+            // Don't forget to add capitals as well! toLowerCase() probably won't work with Kazakh
     )
 
     fun parseCyrillicIntoLatin(textCyrillic: String): String {
@@ -82,7 +81,7 @@ class KazakhCyrillicParser {
         for (letter in textCyrillic) {
             textLatin = when (writingSystemConversionMap.containsKey<String>(Character.toString(letter))) {
                 true -> textLatin.plus(writingSystemConversionMap[Character.toString(letter)])
-                false -> textLatin.plus((textCyrillic))
+                false -> textLatin.plus(" ")
             }
         }
 
